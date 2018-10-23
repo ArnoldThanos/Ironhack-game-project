@@ -1,29 +1,29 @@
 class Game {
-  constructor(ctx, grid, levelColor, player) {
+  constructor(ctx,  player) {
     this.ctx = ctx
-    this.grid = grid
     this.bricks = []
     this.intervalId
     this.player = player
     this.gameOver = false
-    this.levelColor = levelColor
+    this.currentLevel = 0
   }
   
   createLevel() {
     let pixelSide = 40;
     let xPos = 0;
     let yPos = 0;
-    for (let y = 0; y < this.grid.length; y++) {
-      for(let x = 0; x < this.grid[y].length; x++) {
-        if(this.grid[y][x] === 1) {
+    // console.log(levels[0].grid)
+    for (let y = 0; y < levels[this.currentLevel].grid.length; y++) {
+      for(let x = 0; x < levels[this.currentLevel].grid[y].length; x++) {
+        if(levels[this.currentLevel].grid[y][x] === 1) {
           this.bricks.push(new Object(
           this.ctx,
-          this.levelColor,
+          levels[this.currentLevel].color,
           pixelSide,
           xPos,
           yPos));
         }
-        if (this.grid[y][x] === 2) {
+        if (levels[this.currentLevel].grid[y][x] === 2) {
           this.bricks.push(new Goal(
             this.ctx,
             pixelSide,
@@ -36,6 +36,10 @@ class Game {
       xPos = 0
       yPos+= pixelSide
     }
+
+    this.player.x = levels[this.currentLevel].playerStart_x
+    this.player.y = levels[this.currentLevel].playerStart_y
+
   }
   
   start() {
@@ -158,9 +162,34 @@ class Game {
   }
 
   nextLevel() {
-    // playsound
-    
-    console.log('goal')
+    let firedOnce = true
 
+
+
+    if (firedOnce) {
+     
+        
+        clearInterval(this.intervalId);
+        this.bricks = [];
+        this.currentLevel++
+        console.log(this.currentLevel, 'COUNTER')
+        console.log(levels[this.currentLevel].grid)
+
+
+  
+        this.start()
+
+
+        firedOnce = false
+    
+
+
+    }
+
+
+   
+
+
+    
   }
 }

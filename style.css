@@ -6,7 +6,10 @@ body {
 .game-container {
   width: 60%;
   margin: 0 auto;
-  /* background-color: black; */
+  background-image: url('./images/start-img.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 
 }
 
@@ -15,6 +18,6 @@ body {
   border: 2px white solid;
   width: 100%;
   background-color: black;
-  
+
 
 }
