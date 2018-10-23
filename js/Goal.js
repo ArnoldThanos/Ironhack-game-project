@@ -1,15 +1,14 @@
-class Object {
-  constructor(ctx, color, sideLength, x, y) {
+class Goal {
+  constructor(ctx, sideLength, x, y) {
     this.ctx = ctx
-    this.color = color
     this.sideLength = sideLength
     this.x = x
     this.y = y
-    this.type = 'object'
+    this.type  = 'goal'
   }
 
   draw() {
-    this.ctx.fillStyle=this.color;
+    this.ctx.fillStyle= 'red';
     this.ctx.fillRect(this.x, this.y, this.sideLength, this.sideLength); 
   }
 
@@ -18,5 +17,3 @@ class Object {
   left() { return this.x }
   right() { return this.x+this.sideLength }
 }
-
-

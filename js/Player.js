@@ -31,29 +31,6 @@ class Player {
     this.x += this.x_velocity
     this.y += this.y_velocity
     this.y_velocity += this.gravity
-
-  //   switch (keycode) {
-  //     case 37:
-
-
-  //     console.log('left')
-    
-
-  //       break;
-  //   case 38:
-  //     console.log('jump')
-
-  //       break;
-  //   case 39:
-  //   console.log('right')
-
-
-  //   break;
-  // }
-
-
-
-
   }
 
   // If no direction, it stops

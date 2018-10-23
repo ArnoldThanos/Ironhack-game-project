@@ -11,23 +11,21 @@ console.log('Width: ' + canvas.width)
 
 /// first level
 var firstPlayerImg = new Image();
-firstPlayerImg.src="../images/flares/extend.png"
-var playerOne = new Player (ctx, 100, 120, 20, firstPlayerImg)
-var levelOne = new Game(ctx, levels[0].grid, '#8e44ad', playerOne)
+firstPlayerImg.src="../images/player2.png"
+
+
+
+
+
+
+var playerOne = new Player (ctx, 20, 120, 20, firstPlayerImg)
+var levelOne = new Game(ctx, levels[1].grid, levels[1].color, playerOne)
 
 
 
 levelOne.start()
 
 
-
-
-// function movePLayerHandler(player) {
-
-//   document.
-
-
-// }
 
 window.addEventListener("keydown", function(event) {
   switch(event.keyCode) {
@@ -37,7 +35,7 @@ window.addEventListener("keydown", function(event) {
     case 37: // left
       playerOne.move("left")
       break
-    case 38: // up
+    case 32: // up
       playerOne.move("up")
       break
   }
@@ -46,12 +44,3 @@ window.addEventListener("keyup", function(event) {
   playerOne.move()
 });
 
-
-
-function keyListener(e) {
-
-
-  playerOne.update(true, e.keyCode )
-  pl
-
-}
