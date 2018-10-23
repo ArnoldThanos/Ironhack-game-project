@@ -1,0 +1,19 @@
+body {
+  /* background-image: url('./images/scy-bg.jpeg'); */
+  padding-top: 50px;
+}
+
+.game-container {
+  width: 60%;
+  margin: 0 auto;
+  /* background-color: black; */
+
+}
+
+#gameCanvas {
+  display: block;
+  border: 2px black solid;
+  width: 100%
+  
+
+}
