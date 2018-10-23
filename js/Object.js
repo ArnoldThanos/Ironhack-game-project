@@ -8,13 +8,11 @@ class Object {
   }
 
   draw() {
-    this.ctx.fillStyle="#FF0000";
-    this.ctx.fillRect(this.x ,this.y ,this.sideLength, this.sideLength); 
-    // console.log('drawed')
+    this.ctx.fillStyle=this.color;
+    this.ctx.fillRect(this.x, this.y, this.sideLength, this.sideLength); 
   }
+
+  
 }
 
 
-// ctx.fillStyle="#FF0000";
-
-// ctx.fillRect(50 ,50 , 50, 50);

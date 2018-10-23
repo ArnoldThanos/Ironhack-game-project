@@ -1,5 +1,5 @@
 body {
-  /* background-image: url('./images/scy-bg.jpeg'); */
+  background-image: url('./images/scy-bg.jpeg');
   padding-top: 50px;
 }
 
@@ -12,8 +12,9 @@ body {
 
 #gameCanvas {
   display: block;
-  border: 2px black solid;
-  width: 100%
+  border: 2px white solid;
+  width: 100%;
+  background-color: black;
   
 
 }
