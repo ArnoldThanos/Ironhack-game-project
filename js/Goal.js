@@ -4,12 +4,15 @@ class Goal {
     this.sideLength = sideLength
     this.x = x
     this.y = y
-    this.type  = 'goal'
+    this.type  = 'goal',
+    this.image = new Image()
   }
 
   draw() {
-    this.ctx.fillStyle= 'red';
-    this.ctx.fillRect(this.x, this.y, this.sideLength, this.sideLength); 
+    
+    this.image.src="../images/flares/corona.png"
+   
+    ctx.drawImage(this.image,this.x,this.y,40,40);
   }
 
   top() { return this.y }

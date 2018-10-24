@@ -4,7 +4,6 @@ class Game {
     this.bricks = []
     this.intervalId
     this.player = player
-    this.gameOver = false
     this.currentLevel = 0
   }
   
@@ -29,6 +28,13 @@ class Game {
             pixelSide,
             xPos,
             yPos));
+        }
+        if(levels[this.currentLevel].grid[y][x] === 3) {
+          this.bricks.push(new Trap(
+          this.ctx,
+          pixelSide,
+          xPos,
+          yPos));
         }
         xPos+= pixelSide
       }
@@ -76,12 +82,18 @@ class Game {
         && this.player.x < levelOne.bricks[i].right()
       ) {
 
+        if (levelOne.bricks[i].type === 'trap') {
+          this.gameOver()
+        } else
+
         if (levelOne.bricks[i].type === 'goal') {
           this.nextLevel()
+          // setTimeout(this.nextLevel(),5000);
 
         } else {
           this.player.y = levelOne.bricks[i].top() - this.player.radius
           this.player.y_velocity = 0
+          this.player.jumping = false
         }
       }
       // Check top collision for the player
@@ -92,8 +104,13 @@ class Game {
         && this.player.x < levelOne.bricks[i].right()
       ) {
 
+        if (levelOne.bricks[i].type === 'trap') {
+          this.gameOver()
+        } else
+
         if (levelOne.bricks[i].type === 'goal') {
           this.nextLevel()
+          // setTimeout(this.nextLevel(),5000);
 
         } else {
           this.player.y = levelOne.bricks[i].bottom() + this.player.radius
@@ -108,7 +125,12 @@ class Game {
         && this.player.y < levelOne.bricks[i].bottom()
       ) {
 
+        if (levelOne.bricks[i].type === 'trap') {
+          this.gameOver()
+        } else
+
         if (levelOne.bricks[i].type === 'goal') {
+          // setTimeout(this.nextLevel(),2000);
           this.nextLevel()
 
         } else {
@@ -126,8 +148,13 @@ class Game {
         && this.player.y < levelOne.bricks[i].bottom()
       ) {
 
+        if (levelOne.bricks[i].type === 'trap') {
+          this.gameOver()
+        } else
+
         if (levelOne.bricks[i].type === 'goal') {
           this.nextLevel()
+          
 
         } else {
           // different corerction for left and right for smother movement
@@ -156,40 +183,50 @@ class Game {
 
     // check if outside bottom of screen
     if (this.player.y + this.player.radius > canvas.height + 200) {
-      this.gameOver = true
+      this.gameOver()
     
     }
   }
 
   nextLevel() {
-    let firedOnce = true
-
-
-
-    if (firedOnce) {
      
-        
-        clearInterval(this.intervalId);
-        this.bricks = [];
-        this.currentLevel++
-        console.log(this.currentLevel, 'COUNTER')
-        console.log(levels[this.currentLevel].grid)
+          goalSound.play()
+          clearInterval(this.intervalId);
+
+          if (this.currentLevel === levels.length -1) {
+            this.currentLevel = 0 
+          } else {
+            this.currentLevel++
+          }
+          this.bricks = [];
+          
+          betweenLevel.style.transform = 'translate(0px, 0px)';
+          betweenLevelHandler()
+          setTimeout(()=>{
+          betweenLevel.style.transform = 'translate(1500px, 0px)';
+
+            this.start()
+          }, 5000)
 
 
+
+
+
+
+
+
+      
   
-        this.start()
+  }
 
+  gameOver() {
+    togglePlay()
+    blastSound.play()
+    bgMusic.currentTime = 0;
+    clearInterval(this.intervalId);
+    this.bricks = [];
+    this.currentLevel = 0
+    gameOverScreen.style.transform = 'translate(0px, 0px)';
 
-        firedOnce = false
-    
-
-
-    }
-
-
-   
-
-
-    
   }
 }

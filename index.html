@@ -5,16 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Multidimensional</title>
+  <title>Wake Up</title>
 </head>
 <body>
 
 
     <div class="game-container">
         <canvas id="gameCanvas" width="800" height="600"></canvas>
-    </div>
-  
 
+
+        <div class="startScreen" >
+            <h1>Wake Up</h1>
+            <!-- <button class="start">Start game</button> -->
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+            <ul>
+                <li id="playBtn">Play</li>
+                <li>High Score</li>
+                <li>About</li>
+            </ul>
+
+            <div class="text">
+                <p>Higher dimensional alien races do not fly around in big space ships. They are beings of light that teleport using mega force. This one is lost. Help him find his way home through the dimension....</p>
+            </div>
+        </div>
+        <!-- start screen ends -->
+
+        <div class="gameOver">
+            <h1>GAME OVER</h1>
+            <p>You have disapionted me....</p>
+            <li style="text-align: center;">Home Screen</li>
+        </div>
+
+        <div class="betweenLevel">        
+            <img class="betweenImg"src="" alt="">
+            <h1>Between level</h1>
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+
+            <p class="betweenP">Rover name: "Curiosity"</p>
+            <p class="betweenP">Landingdate: "2012-08-06"</p>
+            <p class="betweenP" id="photoId"></p>
+   
+
+
+        </div>
+
+
+    </div>
+
+
+    <audio id="blastSound"src="./sounds/fallDown.mp3"></audio>
+    <audio id="goalSound"src="../sounds/goal.mp3"></audio>
+    <audio id="bgMusic"src="../sounds/music2.mp3"></audio>
+   
+
+    <script src="js/Trap.js"></script>
+    <script src="js/soundHandling.js"></script>
     <script src="js/Goal.js"></script>
     <script src="js/Levels.js"></script>
     <script src="js/Game.js"></script>
