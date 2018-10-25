@@ -84,30 +84,30 @@ function startGame(element) {
   levelOne.start()
 }
 
-// var marsImages = []
-// var request = new XMLHttpRequest();
+var marsImages = []
+var request = new XMLHttpRequest();
 
-// request.open('GET', 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/photos?sol=1000&page=2', true);
-// request.onload = function () {
-//   // Begin accessing JSON data here
-//   var data = JSON.parse(this.response);
-//   if (request.status >= 200 && request.status < 400) {
-//     data.photos.forEach(img => {
-//       marsImages.push(img)
-//     })
-//   } else {
-//     console.log('error');
-//   }
-// }
-// request.send();
+request.open('GET', 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/photos?sol=1000&page=2', true);
+request.onload = function () {
+  // Begin accessing JSON data here
+  var data = JSON.parse(this.response);
+  if (request.status >= 200 && request.status < 400) {
+    data.photos.forEach(img => {
+      marsImages.push(img)
+    })
+  } else {
+    console.log('error');
+  }
+}
+request.send();
 
 function betweenLevelHandler() {
   console.log('hey')
-  // const randomIndex = Math.floor(Math.random() * marsImages.length)
-  // const thisImg = marsImages[randomIndex]
-  // betweenLevel.style.backgroundImage = `url(${thisImg.img_src})`;
-  // document.querySelector('#photoId').innerHTML = `Photo ID: ${thisImg.id}`
-  // betweenLevel.appendChild(photoId);
+  const randomIndex = Math.floor(Math.random() * marsImages.length)
+  const thisImg = marsImages[randomIndex]
+  betweenLevel.style.backgroundImage = `url(${thisImg.img_src})`;
+  document.querySelector('#photoId').innerHTML = `Photo ID: ${thisImg.id}`
+  betweenLevel.appendChild(photoId);
 }
 
 function translateAwayAllPages() {

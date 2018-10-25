@@ -14,13 +14,14 @@ class Trap {
   }
 
   draw() {
+    this.image.src="../images/trap.png"
     if (this.movement === 'verticaly_1') {
       if (this.movementCounter > 150 || this.movementCounter <0) {
         
         this.speed =  this.speed - (this.speed * 2)
-
+        
       }
-
+      
 
       
 
@@ -54,7 +55,6 @@ class Trap {
 
 
 
-    this.image.src="../images/trap.png"
    
     ctx.drawImage(this.image,this.x,this.y,40,40); 
   }
