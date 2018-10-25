@@ -34,7 +34,26 @@ class Game {
           this.ctx,
           pixelSide,
           xPos,
-          yPos));
+          yPos,
+          'none'));
+        }
+
+        if(levels[this.currentLevel].grid[y][x] === 4) {
+          this.bricks.push(new Trap(
+          this.ctx,
+          pixelSide,
+          xPos,
+          yPos,
+          'verticaly_1'));
+        }
+
+        if(levels[this.currentLevel].grid[y][x] === 5) {
+          this.bricks.push(new Trap(
+          this.ctx,
+          pixelSide,
+          xPos,
+          yPos,
+          'horisontaly_1'));
         }
         xPos+= pixelSide
       }
@@ -49,7 +68,9 @@ class Game {
   }
   
   start() {
+    betweenLevelHandler()
     this.createLevel()
+    
     this.intervalId = setInterval(()=>{
       this.update()
       this.draw()
@@ -59,6 +80,7 @@ class Game {
   update() {
     playerOne.update()
     this.checkColision()
+
   }
   
   draw() {
@@ -91,11 +113,12 @@ class Game {
           // setTimeout(this.nextLevel(),5000);
 
         } else {
+
           this.player.y = levelOne.bricks[i].top() - this.player.radius
           this.player.y_velocity = 0
           this.player.jumping = false
         }
-      }
+      } 
       // Check top collision for the player
       if (
         levelOne.bricks[i].top() < this.player.top() 
@@ -201,7 +224,7 @@ class Game {
           this.bricks = [];
           
           betweenLevel.style.transform = 'translate(0px, 0px)';
-          betweenLevelHandler()
+        
           setTimeout(()=>{
           betweenLevel.style.transform = 'translate(1500px, 0px)';
 

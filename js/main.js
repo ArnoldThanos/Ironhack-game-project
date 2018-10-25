@@ -69,7 +69,7 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
   e.preventDefault()
   if (e.target.innerHTML === 'Play') {
     startGame()
-    togglePlay()
+    // togglePlay()
   }
   if (e.target.innerHTML === 'Home Screen') {
     console.log('home')
@@ -86,7 +86,7 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
 
 function startGame(element) {
 
-  console.log('startGame')
+ 
   
 
 //   startScreen.style.display = 'none'
@@ -127,17 +127,15 @@ function betweenLevelHandler() {
 
   const thisImg = marsImages[randomIndex]
 
-
-  console.log(thisImg)
   // betweenImg.src = thisImg.img_src
 
   betweenLevel.style.backgroundImage = `url(${thisImg.img_src})`;
   document.querySelector('#photoId').innerHTML = `Photo ID: ${thisImg.id}`
-  
+ 
 
 
 
-
+ 
 
 
 

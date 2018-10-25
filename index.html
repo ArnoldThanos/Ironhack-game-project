@@ -12,8 +12,7 @@
 
     <div class="game-container">
         <canvas id="gameCanvas" width="800" height="600"></canvas>
-
-
+        <button class="sound">SOUND</button>
         <div class="startScreen" >
             <h1>Wake Up</h1>
             <!-- <button class="start">Start game</button> -->
@@ -30,11 +29,10 @@
             </ul>
 
             <div class="text">
-                <p>Higher dimensional alien races do not fly around in big space ships. They are beings of light that teleport using mega force. This one is lost. Help him find his way home through the dimension....</p>
+                <p>Higher dimensional alien races do not fly around in big space ships. They are beings of light that teleport using mega force. This one is lost. Help him find his way home.</p>
             </div>
         </div>
         <!-- start screen ends -->
-
         <div class="gameOver">
             <h1>GAME OVER</h1>
             <p>You have disapionted me....</p>
@@ -43,24 +41,25 @@
 
         <div class="betweenLevel">        
             <img class="betweenImg"src="" alt="">
-            <h1>Between level</h1>
+            <h1>Image of Mars from the NASA API</h1>
+            <p class="betweenP" id="levelMessage">Look out for the evil entities in red...</p>
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
                 <div class="sk-cube4 sk-cube"></div>
                 <div class="sk-cube3 sk-cube"></div>
             </div>
-
             <p class="betweenP">Rover name: "Curiosity"</p>
             <p class="betweenP">Landingdate: "2012-08-06"</p>
             <p class="betweenP" id="photoId"></p>
-   
-
-
+            
         </div>
 
 
+        
     </div>
+
+
 
 
     <audio id="blastSound"src="./sounds/fallDown.mp3"></audio>

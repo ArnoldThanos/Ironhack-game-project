@@ -2,7 +2,7 @@
 
 body {
   background-image: url('./images/scy-bg.jpeg');
-  padding-top: 50px;
+  padding-top: 30px;
   font-family: 'Orbitron', sans-serif;
   color: white;
   overflow: hidden;
@@ -20,6 +20,10 @@ body {
   border: 2px white solid;
   width: 100%;
   background-color: black;
+}
+
+.sound {
+  margin: 0 0 0 auto;
 }
 
 /*************Start Screen ***********/
@@ -72,6 +76,8 @@ body {
   width: 100%;
   position: absolute;
   bottom: 70px;
+  line-height: 40px;
+  font-size: 50px;
   
 }
 

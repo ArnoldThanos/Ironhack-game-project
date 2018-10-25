@@ -32,8 +32,6 @@ class Player {
     this.x_velocity*=0.9
     this.y_velocity*=0.9
 
-
-
     if (playerDirection.right) {
       this.x_velocity+=0.5
     }
@@ -47,12 +45,9 @@ class Player {
       this.y_velocity=-20
     }
 
-
-
     this.x += this.x_velocity
     this.y += this.y_velocity
-    this.y_velocity += this.gravity
-  
+    this.y_velocity += this.gravity  
   }
 
   // If no direction, it stops
