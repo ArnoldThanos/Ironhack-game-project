@@ -62,26 +62,18 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
   }
   if (e.target.innerHTML === 'Home Screen') {
     console.log('home')
-    gameOverScreen.style.transform = 'translate(1500px, 10000px)';
+    translateAwayAllPages()
     startScreen.style.transform = 'translate(0px, 0px)'; 
-    gameOverScreen.style.transform = 'translate(1500px, 0px)';
-    betweenLevel.style.transform = 'translate(1500px, 0px)';
-    aboutPage.style.transform = 'translate(1500px, 0px)';
-    highScorePage.style.transform = 'translate(1500px, 0px)';
+  
   }
 
   if (e.target.innerHTML === 'About') {
-   
-    startScreen.style.transform = 'translate(1500px, 10000px)';
+    translateAwayAllPages()
     aboutPage.style.transform = 'translate(0px, 0px)'; 
   }
 
   if (e.target.innerHTML === 'High Score') {
-    gameOverScreen.style.transform = 'translate(1500px, 0px)';
-    betweenLevel.style.transform = 'translate(1500px, 0px)';
-    aboutPage.style.transform = 'translate(1500px, 0px)';
-    startScreen.style.transform = 'translate(1500px, 10000px)';
-    aboutPage.style.transform = 'translate(0px, 0px)'; 
+    translateAwayAllPages()
     highScorePage.style.transform = 'translate(0px, 0px)';
   }
 }))
@@ -89,8 +81,8 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
 function startGame(element) {
 //   startScreen.style.display = 'none'
   canvas.focus()
-  startScreen.style.transform = 'translate(1500px, 0px)';
-    levelOne.start()
+  translateAwayAllPages()
+  levelOne.start()
 }
 
 var marsImages = []
@@ -118,6 +110,15 @@ function betweenLevelHandler() {
   betweenLevel.style.backgroundImage = `url(${thisImg.img_src})`;
   document.querySelector('#photoId').innerHTML = `Photo ID: ${thisImg.id}`
   betweenLevel.appendChild(photoId); 
+}
+
+function translateAwayAllPages() {
+  gameOverScreen.style.transform = 'translate(1500px, 10000px)';
+  startScreen.style.transform = 'translate(1500px, 0px)'; 
+  gameOverScreen.style.transform = 'translate(1500px, 0px)';
+  betweenLevel.style.transform = 'translate(1500px, 0px)';
+  aboutPage.style.transform = 'translate(1500px, 0px)';
+  highScorePage.style.transform = 'translate(1500px, 0px)';
 }
  
 

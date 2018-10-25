@@ -49,21 +49,4 @@ class Player {
     this.y += this.y_velocity
     this.y_velocity += this.gravity  
   }
-
-  // If no direction, it stops
-  // move(direction) {
-  //   this.x_velocity = 0
-  //   if (direction === "right") {
-  //     this.x_velocity+=4
-  //   }
-  //   if (direction === "left") {
-  //     this.x_velocity-=4
-  //   }
-  //   if (direction === "up" && this.jumping === false) {
-  //     this.y_velocity = -9
-  //     this.jumping = true
-  //   }
-  // }
-
-
 }
