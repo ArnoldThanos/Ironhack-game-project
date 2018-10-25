@@ -19,7 +19,7 @@ class Player {
 
   draw() {
     // this.gravity()
-    ctx.drawImage(
+      this.ctx.drawImage(
       this.image,
       this.x-this.radius,
       this.y-this.radius,
