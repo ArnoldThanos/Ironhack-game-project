@@ -69,7 +69,7 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
   e.preventDefault()
   if (e.target.innerHTML === 'Play') {
     startGame()
-    // togglePlay()
+    togglePlay()
   }
   if (e.target.innerHTML === 'Home Screen') {
     console.log('home')
