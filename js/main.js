@@ -1,10 +1,10 @@
+
 var canvas = document.querySelector('canvas')
 var startScreen = document.querySelector('.startScreen')
 var aboutPage = document.querySelector('.aboutPage')
 var highScorePage = document.querySelector('.highScorePage')
 var gameOverScreen = document.querySelector('.gameOver')
 var betweenLevel = document.querySelector('.betweenLevel')
-var betweenImg = document.querySelector('.betweenImg')
 var highScorePage = document.querySelector('.highScorePage')
 
 gameOverScreen.style.transform = 'translate(1500px, 0px)';
@@ -16,13 +16,13 @@ var ctx = canvas.getContext('2d')
 
 /// first level
 var firstPlayerImg = new Image();
-firstPlayerImg.src="../images/player2.png"
+firstPlayerImg.src = "../images/player2.png"
 
-var playerOne = new Player (ctx, 20, 120, 20, firstPlayerImg)
+var playerOne = new Player(ctx, 20, 120, 20, firstPlayerImg)
 var levelOne = new Game(ctx, playerOne)
 
 function startGame() {
-  canvas.style.visibility = 'visible' 
+  canvas.style.visibility = 'visible'
 }
 
 var playerDirection = {
@@ -31,19 +31,19 @@ var playerDirection = {
   up: false,
 }
 
-function keyListener (event) {
+function keyListener(event) {
   // event.preventDefault()
   var key_state = event.type === "keydown" ? true : false;
-  switch(event.keyCode) {
+  switch (event.keyCode) {
     case 39: // right
       playerDirection.right = key_state
-    break
+      break
     case 37: // left
       playerDirection.left = key_state
-    break
+      break
     case 32: // up
       playerDirection.up = key_state
-    break
+      break
   }
 }
 
@@ -53,23 +53,22 @@ window.addEventListener('keyup', keyListener)
 
 // window.addEventListener(“keydown”, keyListener)
 // window.addEventListener(“keyup”, keyListener)
-document.querySelectorAll('li').forEach((li) => li.addEventListener('click', function(e) {
- 
+document.querySelectorAll('li').forEach((li) => li.addEventListener('click', function (e) {
+
   e.preventDefault()
   if (e.target.innerHTML === 'Play') {
     startGame()
-    // togglePlay()
+    togglePlay()
   }
   if (e.target.innerHTML === 'Home Screen') {
     console.log('home')
     translateAwayAllPages()
-    startScreen.style.transform = 'translate(0px, 0px)'; 
-  
+    startScreen.style.transform = 'translate(0px, 0px)';
   }
 
   if (e.target.innerHTML === 'About') {
     translateAwayAllPages()
-    aboutPage.style.transform = 'translate(0px, 0px)'; 
+    aboutPage.style.transform = 'translate(0px, 0px)';
   }
 
   if (e.target.innerHTML === 'High Score') {
@@ -79,7 +78,7 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
 }))
 
 function startGame(element) {
-//   startScreen.style.display = 'none'
+  //   startScreen.style.display = 'none'
   canvas.focus()
   translateAwayAllPages()
   levelOne.start()
@@ -92,7 +91,9 @@ request.open('GET', 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/p
 request.onload = function () {
   // Begin accessing JSON data here
   var data = JSON.parse(this.response);
-  console.log(data.photos)
+
+
+
   if (request.status >= 200 && request.status < 400) {
     data.photos.forEach(img => {
       marsImages.push(img)
@@ -101,31 +102,22 @@ request.onload = function () {
     console.log('error');
   }
 }
-
 request.send();
+
 function betweenLevelHandler() {
   const randomIndex = Math.floor(Math.random() * marsImages.length)
   const thisImg = marsImages[randomIndex]
-  // betweenImg.src = thisImg.img_src
   betweenLevel.style.backgroundImage = `url(${thisImg.img_src})`;
   document.querySelector('#photoId').innerHTML = `Photo ID: ${thisImg.id}`
-  betweenLevel.appendChild(photoId); 
+  betweenLevel.appendChild(photoId);
 }
 
 function translateAwayAllPages() {
   gameOverScreen.style.transform = 'translate(1500px, 10000px)';
-  startScreen.style.transform = 'translate(1500px, 0px)'; 
+  startScreen.style.transform = 'translate(1500px, 0px)';
   gameOverScreen.style.transform = 'translate(1500px, 0px)';
   betweenLevel.style.transform = 'translate(1500px, 0px)';
   aboutPage.style.transform = 'translate(1500px, 0px)';
   highScorePage.style.transform = 'translate(1500px, 0px)';
 }
- 
-
-
-
-
-
-
-
 

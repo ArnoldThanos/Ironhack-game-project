@@ -208,7 +208,6 @@ class Game {
   }
 
   nextLevel() {
-     
     goalSound.play()
     clearInterval(this.intervalId);
 
