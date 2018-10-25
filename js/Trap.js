@@ -54,7 +54,7 @@ class Trap {
 
 
 
-    this.image.src="../images/flares/trap.png"
+    this.image.src="../images/trap.png"
    
     ctx.drawImage(this.image,this.x,this.y,40,40); 
   }

@@ -10,7 +10,7 @@ class Goal {
 
   draw() {
     
-    this.image.src="../images/flares/corona.png"
+    this.image.src="../images/corona.png"
    
     ctx.drawImage(this.image,this.x,this.y,40,40);
   }
