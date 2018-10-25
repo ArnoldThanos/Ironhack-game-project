@@ -45,6 +45,8 @@ body {
   /* display: none; */
 }
 
+
+
 .startScreen h1 {
   text-align: center;
   font-size: 100px;
@@ -97,6 +99,47 @@ button.start:focus {
   outline: none;
 }
 
+/******************* About page ****************/
+
+.aboutPage {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  top: -3px;
+  left: -3px;
+  background-color: black;
+  background-image: url('./images/start-img.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
+/******************* About page ****************/
+
+
+.highScorePage {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  top: -3px;
+  left: -3px;
+  background-color: black;
+  background-image: url('./images/start-img.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+
 /******************* GAME OVER SCREEN ****************/
 .gameOver {
   text-align: center;
@@ -113,7 +156,6 @@ button.start:focus {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-
 }
 
 .gameOver h1 {
@@ -135,7 +177,6 @@ button.start:focus {
 
 
 /******************* GAME OVER SCREEN ****************/
-
 .betweenLevel {
   text-align: center;
   width: 100px;
@@ -163,6 +204,8 @@ margin-top: 40px;
 
 }
 
+
+/******************* GAME OVER SCREEN ****************/
 
 
 

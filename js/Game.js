@@ -64,7 +64,6 @@ class Game {
 
     this.player.x = levels[this.currentLevel].playerStart_x
     this.player.y = levels[this.currentLevel].playerStart_y
-
   }
   
   start() {
@@ -80,7 +79,6 @@ class Game {
   update() {
     playerOne.update()
     this.checkColision()
-
   }
   
   draw() {
@@ -177,8 +175,7 @@ class Game {
 
         if (levelOne.bricks[i].type === 'goal') {
           this.nextLevel()
-          
-
+    
         } else {
           // different corerction for left and right for smother movement
           this.player.x-=1
@@ -207,39 +204,28 @@ class Game {
     // check if outside bottom of screen
     if (this.player.y + this.player.radius > canvas.height + 200) {
       this.gameOver()
-    
     }
   }
 
   nextLevel() {
      
-          goalSound.play()
-          clearInterval(this.intervalId);
+    goalSound.play()
+    clearInterval(this.intervalId);
 
-          if (this.currentLevel === levels.length -1) {
-            this.currentLevel = 0 
-          } else {
-            this.currentLevel++
-          }
-          this.bricks = [];
-          
-          betweenLevel.style.transform = 'translate(0px, 0px)';
-        
-          setTimeout(()=>{
-          betweenLevel.style.transform = 'translate(1500px, 0px)';
+    if (this.currentLevel === levels.length -1) {
+      this.currentLevel = 0 
+    } else {
+      this.currentLevel++
+    }
+    this.bricks = [];
+    
+    betweenLevel.style.transform = 'translate(0px, 0px)';
 
-            this.start()
-          }, 5000)
+    setTimeout(()=>{
+    betweenLevel.style.transform = 'translate(1500px, 0px)';
 
-
-
-
-
-
-
-
-      
-  
+      this.start()
+    }, 5000)
   }
 
   gameOver() {
@@ -250,6 +236,5 @@ class Game {
     this.bricks = [];
     this.currentLevel = 0
     gameOverScreen.style.transform = 'translate(0px, 0px)';
-
   }
 }
