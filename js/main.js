@@ -16,7 +16,7 @@ var ctx = canvas.getContext('2d')
 
 /// first level
 var firstPlayerImg = new Image();
-firstPlayerImg.src = "./images/sun.png";
+firstPlayerImg.src = "./images/player2.png";
 
 var playerOne = new Player(ctx, 20, 120, 20, firstPlayerImg)
 var levelOne = new Game(ctx, playerOne)
