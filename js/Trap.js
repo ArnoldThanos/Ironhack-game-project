@@ -14,7 +14,7 @@ class Trap {
   }
 
   draw() {
-    this.image.src="../images/trap.png"
+    this.image.src="./images/trap.png"
     if (this.movement === 'verticaly_1') {
       if (this.movementCounter > 150 || this.movementCounter <0) {
         
