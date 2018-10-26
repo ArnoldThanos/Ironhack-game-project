@@ -15,10 +15,10 @@ highScorePage.style.transform = 'translate(1500px, 0px)';
 var ctx = canvas.getContext('2d')
 
 /// first level
-var firstPlayerImg = new Image();
-firstPlayerImg.src = "./images/player2.png";
+var player = new Image();
+player.src = "./images/player2.png";
 
-var playerOne = new Player(ctx, 20, 120, 20, firstPlayerImg)
+var playerOne = new Player(ctx, 20, 120, 20, player)
 var levelOne = new Game(ctx, playerOne)
 
 function startGame() {
@@ -50,9 +50,6 @@ function keyListener(event) {
 window.addEventListener('keydown', keyListener)
 window.addEventListener('keyup', keyListener)
 
-
-// window.addEventListener(“keydown”, keyListener)
-// window.addEventListener(“keyup”, keyListener)
 document.querySelectorAll('li').forEach((li) => li.addEventListener('click', function (e) {
 
   e.preventDefault()
@@ -78,7 +75,6 @@ document.querySelectorAll('li').forEach((li) => li.addEventListener('click', fun
 }))
 
 function startGame(element) {
-  //   startScreen.style.display = 'none'
   canvas.focus()
   translateAwayAllPages()
   levelOne.start()
@@ -118,4 +114,3 @@ function translateAwayAllPages() {
   aboutPage.style.transform = 'translate(1500px, 0px)';
   highScorePage.style.transform = 'translate(1500px, 0px)';
 }
-

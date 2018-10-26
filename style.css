@@ -25,7 +25,7 @@ body {
   margin: 0 0 0 auto;
 }
 
-/*************Start Screen ***********/
+/************* START PAGE ***********/
 
 .mainPage {
   width: 100px;
@@ -93,7 +93,7 @@ button.start:focus {
   outline: none;
 }
 
-/******************* GAME OVER SCREEN ****************/
+/******************* GAME OVER PAGE ****************/
 .gameOver h1 {
   font-size: 100px;
   text-align: center;
@@ -109,7 +109,7 @@ button.start:focus {
   cursor: pointer;
 } 
 
-/******************* GAME OVER SCREEN ****************/
+/******************* BETWEEN LEVEL PAGE ****************/
  .betweenLevel {
   text-align: center; 
 } 
@@ -124,7 +124,42 @@ margin-top: 40px;
 
 }
 
-/*************Loading Image ***********/
+/******************* HIGH SCORE PAGE ****************/
+.highScorePage {
+  text-align: center;
+  font-size: 20px;
+
+}
+
+.highScorePage li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.highScorePage li:hover {
+  color: black;
+}
+
+/******************* HIGH SCORE PAGE ****************/
+.aboutPage {
+  text-align: center;
+  font-size: 20px;
+  line-height: 25px;
+
+}
+
+.aboutPage li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.aboutPage li:hover {
+  color: black;
+}
+
+
+
+/************* LOADING ANIMATION ***********/
 .sk-folding-cube {
   margin: 20px auto;
   width: 40px;

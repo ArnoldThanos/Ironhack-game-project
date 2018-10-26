@@ -44,7 +44,6 @@ class Player {
       this.jumping = true
       this.y_velocity=-20
     }
-
     this.x += this.x_velocity
     this.y += this.y_velocity
     this.y_velocity += this.gravity  
