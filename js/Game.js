@@ -79,6 +79,8 @@ class Game {
   update() {
     playerOne.update()
     this.checkColision()
+ 
+    
   }
   
   draw() {
@@ -186,18 +188,18 @@ class Game {
     }
     // check if outside left of screen
     if (this.player.x - this.player.radius < 0) {
-      console.log('outside')
+     
       this.player.x = 20
     }
     // check if outside right of screen
     if (this.player.x + this.player.radius > canvas.width) {
       this.player.x = canvas.width - 20
-      console.log('outside')
+      
     }
 
     // check if outside top of screen
     if (this.player.y - this.player.radius < 0) {
-      console.log('outside')
+  
       this.player.y_velocity = 2
     }
 

@@ -98,7 +98,6 @@ request.onload = function () {
 request.send();
 
 function betweenLevelHandler() {
-  console.log('hey')
   const randomIndex = Math.floor(Math.random() * marsImages.length)
   const thisImg = marsImages[randomIndex]
   betweenLevel.style.backgroundImage = `url(${thisImg.img_src})`;

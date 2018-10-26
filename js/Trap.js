@@ -5,7 +5,6 @@ class Trap {
     this.sideLength = sideLength
     this.x = x
     this.y = y
-    this.type = 'object'
     this.type = 'trap'
     this.image = new Image(),
     this.movement = movement,
@@ -21,46 +20,23 @@ class Trap {
         this.speed =  this.speed - (this.speed * 2)
         
       }
-      
-
-      
-
       this.movementCounter+= this.speed
       this.y+= this.speed
-
-      console.log(this.speed)
-
-
-
     }
 
     if (this.movement === 'horisontaly_1') {
       if (this.movementCounter > 150 || this.movementCounter <0) {
         
         this.speed =  this.speed - (this.speed * 2)
-
       }
-
-
       this.movementCounter+= this.speed
       this.x+= this.speed
-
-      console.log(this.speed)
-
-
-
     }
-
-
-
-
-
-   
     ctx.drawImage(this.image,this.x,this.y,40,40); 
   }
 
-
   update() {
+  
 
   }
 
