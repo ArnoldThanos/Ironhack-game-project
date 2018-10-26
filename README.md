@@ -31,4 +31,7 @@ If you’d like to view my project in your browser:
 
 The game is also online on GitHub Pages: 
 https://axeldahlin.github.io/iron-game-project/
+<<<<<<< HEAD
 
+=======
+>>>>>>> d7a07599cc2d0a1a09d438c0d34529050262ee47

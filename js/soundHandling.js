@@ -2,7 +2,6 @@ const bgMusic = document.querySelector('#bgMusic')
 const goalSound = document.querySelector('#goalSound')
 const blastSound = document.querySelector('#blastSound')
 
-
 var isPlaying = false;
 function togglePlay() {
   if (isPlaying) {
