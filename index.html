@@ -10,10 +10,9 @@
 <body>
     <div class="game-container">
         <canvas id="gameCanvas" width="800" height="600"></canvas>
-        <div class="startScreen" >
+        <div class="startScreen mainPage" >
      
             <h1>Wake Up</h1>
-            <!-- <button class="start">Start game</button> -->
             <div class="sk-folding-cube">
                 <div class="sk-cube1 sk-cube"></div>
                 <div class="sk-cube2 sk-cube"></div>
@@ -31,24 +30,24 @@
             </div>
         </div>
         <!-- start screen ends -->
-        <div class="gameOver">
+        <div class="gameOver mainPage">
             <h1>GAME OVER</h1>
             <li style="text-align: center;">Home Screen</li>
         </div>
 
-        <div class="aboutPage">
+        <div class="aboutPage mainPage">
             <h1>ABOUT</h1>
             <p>The images between levels are from the NASA API. From this site: https://mars-photos.herokuapp.com/explore/ it is possible to fetch 25 images each time without an API key.</p>
             <li style="text-align: center;">Home Screen</li>
         </div>
 
-        <div class="highScorePage">
+        <div class="highScorePage mainPage">
             <h1>HIGHSCRE</h1>
             <p>Im an alien. I dont care about or know what high score is.</p>
             <li style="text-align: center;">Home Screen</li>
         </div>
 
-        <div class="betweenLevel">        
+        <div class="betweenLevel mainPage">        
             <img class="betweenImg"src="" alt="">
             <h1>Image of Mars from the NASA API</h1>
             <p class="betweenP" id="levelMessage">Look out for the evil entities in red...</p>
@@ -63,10 +62,10 @@
             <p class="betweenP" id="photoId"></p>
         </div>
     </div>
+    
     <audio id="blastSound"src="./sounds/fallDown.mp3"></audio>
     <audio id="goalSound"src="./sounds/goal.mp3"></audio>
     <audio id="bgMusic"src="./sounds/music2.mp3"></audio>
-   
     <script src="js/Goal.js"></script>
     <script src="js/soundHandling.js"></script>
     <script src="js/Player.js"></script>
@@ -75,6 +74,5 @@
     <script src="js/Game.js"></script>
     <script src="js/Object.js"></script>
     <script src="js/main.js"></script>
-  
 </body>
 </html>
