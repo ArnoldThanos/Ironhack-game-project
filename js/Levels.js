@@ -22,7 +22,6 @@ var levels = [
     playerStart_x: 20,
     playerStart_y: 20
   },
-
   {
     name: 'Level 2',
     grid:  [
@@ -46,8 +45,6 @@ var levels = [
     playerStart_x: 20,
     playerStart_y: 20
   },
-
-
   {
     name: 'Level 3',
     grid:  [
@@ -117,7 +114,6 @@ var levels = [
     playerStart_x: 750,
     playerStart_y: 500
   },
-
   {
     name: 'Level 6',
     grid:  [
@@ -141,7 +137,6 @@ var levels = [
     playerStart_x: 20,
     playerStart_y: 500
   },
-
   {
     name: 'Level 7',
     grid:  [
@@ -165,7 +160,6 @@ var levels = [
     playerStart_x: 20,
     playerStart_y: 500
   },
-
   {
     name: 'Level 8',
     grid:  [
@@ -189,7 +183,6 @@ var levels = [
     playerStart_x: 20,
     playerStart_y: 500
   },
-
   {
     name: 'Level 9',
     grid:  [
@@ -213,8 +206,6 @@ var levels = [
     playerStart_x: 30,
     playerStart_y: 500
   },
-
-
   {
     name: 'Level 10',
     grid:  [

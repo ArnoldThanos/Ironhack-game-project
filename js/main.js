@@ -7,17 +7,15 @@ var gameOverScreen = document.querySelector('.gameOver')
 var betweenLevel = document.querySelector('.betweenLevel')
 var highScorePage = document.querySelector('.highScorePage')
 
-gameOverScreen.style.transform = 'translate(1500px, 0px)';
-betweenLevel.style.transform = 'translate(1500px, 0px)';
-aboutPage.style.transform = 'translate(1500px, 0px)';
-highScorePage.style.transform = 'translate(1500px, 0px)';
+gameOverScreen.style.transform = 'translate(2500px, 0px)';
+betweenLevel.style.transform = 'translate(2500px, 0px)';
+aboutPage.style.transform = 'translate(2500px, 0px)';
+highScorePage.style.transform = 'translate(2500px, 0px)';
 
 var ctx = canvas.getContext('2d')
-
 /// first level
 var player = new Image();
 player.src = "./images/player2.png";
-
 var playerOne = new Player(ctx, 20, 120, 20, player)
 var levelOne = new Game(ctx, playerOne)
 
@@ -32,7 +30,6 @@ var playerDirection = {
 }
 
 function keyListener(event) {
-  // event.preventDefault()
   var key_state = event.type === "keydown" ? true : false;
   switch (event.keyCode) {
     case 39: // right
@@ -49,9 +46,7 @@ function keyListener(event) {
 
 window.addEventListener('keydown', keyListener)
 window.addEventListener('keyup', keyListener)
-
 document.querySelectorAll('li').forEach((li) => li.addEventListener('click', function (e) {
-
   e.preventDefault()
   if (e.target.innerHTML === 'Play') {
     startGame()
@@ -82,7 +77,6 @@ function startGame(element) {
 
 var marsImages = []
 var request = new XMLHttpRequest();
-
 request.open('GET', 'https://mars-photos.herokuapp.com/api/v1/rovers/curiosity/photos?sol=1000&page=2', true);
 request.onload = function () {
   // Begin accessing JSON data here
@@ -106,10 +100,10 @@ function betweenLevelHandler() {
 }
 
 function translateAwayAllPages() {
-  gameOverScreen.style.transform = 'translate(1500px, 10000px)';
-  startScreen.style.transform = 'translate(1500px, 0px)';
-  gameOverScreen.style.transform = 'translate(1500px, 0px)';
-  betweenLevel.style.transform = 'translate(1500px, 0px)';
-  aboutPage.style.transform = 'translate(1500px, 0px)';
-  highScorePage.style.transform = 'translate(1500px, 0px)';
+  gameOverScreen.style.transform = 'translate(2500px, 10000px)';
+  startScreen.style.transform = 'translate(2500px, 0px)';
+  gameOverScreen.style.transform = 'translate(2500px, 0px)';
+  betweenLevel.style.transform = 'translate(2500px, 0px)';
+  aboutPage.style.transform = 'translate(2500px, 0px)';
+  highScorePage.style.transform = 'translate(2500px, 0px)';
 }

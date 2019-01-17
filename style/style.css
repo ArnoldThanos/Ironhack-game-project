@@ -1,32 +1,26 @@
 @import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900');
-
 body {
-  background-image: url('./images/scy-bg.jpeg');
+  background-image: url('../images/rsz_scy-bg.jpg');
   padding-top: 30px;
   font-family: 'Orbitron', sans-serif;
   color: white;
   overflow: hidden;
 }
-
 .game-container {
   width: 60%;
   margin: 0 auto;
   position: relative;
 }
-
 #gameCanvas {
   display: block;
   border: 2px white solid;
   width: 100%;
   background-color: black;
 }
-
 .sound {
   margin: 0 0 0 auto;
 }
-
 /************* START PAGE ***********/
-
 .mainPage {
   width: 100px;
   height: 100px;
@@ -37,20 +31,16 @@ body {
   top: -3px;
   left: -3px;
   background-color: black;
-  background-image: url('./images/start-img.jpg');
+  background-image: url('../images/rsz_start-img.jpg');
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  /* display: none; */
 }
-
 .startScreen h1 {
   text-align: center;
   font-size: 100px;
   margin: 30px auto;
-  
 }
-
 .startScreen ul {
   list-style: none;
   display: flex;
@@ -58,104 +48,81 @@ body {
   justify-content: space-between;
   margin: 50px auto;
   padding: 0;
-  
 }
-
 .startScreen ul li {
   font-size: 30px;
 }
-
 .startScreen ul li:hover {
   color: black;
   cursor: pointer;
 }
-
 .startScreen .text {
   width: 100%;
   position: absolute;
   bottom: 70px;
   line-height: 40px;
   font-size: 50px;
-  
 }
-
 .startScreen .text p {
   width: 80%;
   margin: 0 auto;
   font-size: 20px;
 }
-
 button.start {
   background-color: blue;
 }
-
 button.start:focus {
   outline: none;
 }
-
 /******************* GAME OVER PAGE ****************/
 .gameOver h1 {
   font-size: 100px;
   text-align: center;
 }
-
 .gameOver li {
   font-size: 30px;
   list-style: none;
 }
-
 .gameOver li:hover {
   color: black;
   cursor: pointer;
 } 
-
 /******************* BETWEEN LEVEL PAGE ****************/
  .betweenLevel {
   text-align: center; 
 } 
-
 .betweenImg {
   width: 100%;
 }
-
 .betweenP {
 font-size: 30px;
 margin-top: 40px;
-
 }
-
 /******************* HIGH SCORE PAGE ****************/
 .highScorePage {
   text-align: center;
   font-size: 20px;
-
 }
-
 .highScorePage li {
   list-style: none;
   cursor: pointer;
 }
-
 .highScorePage li:hover {
   color: black;
 }
-
 /******************* HIGH SCORE PAGE ****************/
 .aboutPage {
   text-align: center;
   font-size: 20px;
   line-height: 25px;
 }
-
 .aboutPage li {
   list-style: none;
   cursor: pointer;
 }
-
 .aboutPage li:hover {
   color: black;
 }
-
 /************* LOADING ANIMATION ***********/
 .sk-folding-cube {
   margin: 20px auto;
@@ -165,7 +132,6 @@ margin-top: 40px;
   -webkit-transform: rotateZ(45deg);
           transform: rotateZ(45deg);
 }
-
 .sk-folding-cube .sk-cube {
   float: left;
   width: 50%;
@@ -228,7 +194,6 @@ margin-top: 40px;
     opacity: 0; 
   } 
 }
-
 @keyframes sk-foldCubeAngle {
   0%, 10% {
     -webkit-transform: perspective(140px) rotateX(-180deg);

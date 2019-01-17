@@ -7,12 +7,10 @@ class Object {
     this.y = y
     this.type = 'object'
   }
-
   draw() {
     this.ctx.fillStyle=this.color;
     this.ctx.fillRect(this.x, this.y, this.sideLength, this.sideLength); 
   }
-
   top() { return this.y }
   bottom() { return this.y+this.sideLength }
   left() { return this.x }

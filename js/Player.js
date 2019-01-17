@@ -16,7 +16,6 @@ class Player {
   bottom() { return this.y+this.radius }
   left() { return this.x-this.radius }
   right() { return this.x+this.radius }
-
   draw() {
     // this.gravity()
       this.ctx.drawImage(
@@ -27,19 +26,15 @@ class Player {
       2*this.radius,
     );
   }
-
   update() {
     this.x_velocity*=0.9
     this.y_velocity*=0.9
-
     if (playerDirection.right) {
       this.x_velocity+=0.5
     }
-
     if (playerDirection.left) {
       this.x_velocity-=0.5
     }
-
     if (playerDirection.up && !this.jumping) {
       this.jumping = true
       this.y_velocity=-20

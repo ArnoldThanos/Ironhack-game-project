@@ -11,22 +11,17 @@ class Trap {
     this.movementCounter = 0
     this.speed = 2
   }
-
   draw() {
     this.image.src="./images/trap.png"
     if (this.movement === 'verticaly_1') {
       if (this.movementCounter > 150 || this.movementCounter <0) {
-        
         this.speed =  this.speed - (this.speed * 2)
-        
       }
       this.movementCounter+= this.speed
       this.y+= this.speed
     }
-
     if (this.movement === 'horisontaly_1') {
       if (this.movementCounter > 150 || this.movementCounter <0) {
-        
         this.speed =  this.speed - (this.speed * 2)
       }
       this.movementCounter+= this.speed
@@ -34,12 +29,8 @@ class Trap {
     }
     ctx.drawImage(this.image,this.x,this.y,40,40); 
   }
-
   update() {
-  
-
   }
-
   top() { return this.y }
   bottom() { return this.y+this.sideLength }
   left() { return this.x }

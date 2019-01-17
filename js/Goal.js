@@ -7,14 +7,10 @@ class Goal {
     this.type  = 'goal',
     this.image = new Image()
   }
-
   draw() {
-    
     this.image.src="./images/corona.png"
-   
     ctx.drawImage(this.image,this.x,this.y,40,40);
   }
-
   top() { return this.y }
   bottom() { return this.y+this.sideLength }
   left() { return this.x }
