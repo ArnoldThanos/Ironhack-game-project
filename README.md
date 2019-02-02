@@ -4,6 +4,9 @@
 
 Wake Up is a game I built in week three of Ironhack bootcamp in Berlin. Wake Up is jump and run game that runs in the browser. I aimed to give the game a minimalistic design and an eerie feeling.
 
+![alt text](https://raw.githubusercontent.com/axeldahlin/Ironhack-game-project/master/images/screenshot1.png "Wake up")
+![alt text](https://raw.githubusercontent.com/axeldahlin/Ironhack-game-project/master/images/screenshot2.png "Wake Up")
+
 ## Used technologies
 - Vanilla JavaScript
 - the canvas HTML element to draw
