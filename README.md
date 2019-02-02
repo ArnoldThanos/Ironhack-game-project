@@ -10,24 +10,26 @@ Wake Up is a game I built in week three of Ironhack bootcamp in Berlin. Wake Up 
   
 ## Media
 
-- The images that are displayed between levels are fetched from The Mars Api.
-https://mars-photos.herokuapp.com/explore/
+**The images that are displayed between levels are fetched from The Mars Api.**
+- https://mars-photos.herokuapp.com/explore/
 
-- Sound effects are from:
-https://www.zapsplat.com/
+**Sound effects are from:**
+- https://www.zapsplat.com/
  
-- Images are from:
-https://opengameart.org/content/lens-flares-and-particles?page=1
-https://unsplash.com/
+**Images are from:**
+- https://opengameart.org/content/lens-flares-and-particles?page=1
+- https://unsplash.com/
 
-  
 ## Setup
 
 If you’d like to view my project in your browser:
 
-- git clone https://github.com/axeldahlin/iron-game-project.git in your terminal
-- cd lab-css-recipies-clone
-- open index.html
+```
+$ git clone https://github.com/axeldahlin/Ironhack-game-project.git
+$ cd Ironhack-game-project
 
-The game is also online on GitHub Pages: 
-https://axeldahlin.github.io/ironhack-game-project/
+```
+And then right click on the ```index.html``` file and open it in your browser.
+
+The game is also on GitHub Pages: 
+https://axeldahlin.github.io/Ironhack-game-project/
