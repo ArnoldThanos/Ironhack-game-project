@@ -83,6 +83,7 @@ class Game {
   checkColision() {
     // this.collison = false;
     for (let i = 0; i < levelOne.bricks.length; i++) {
+      console.log(i)
       // Check bottom collision for the player
       if (
         levelOne.bricks[i].top() < this.player.bottom() 
